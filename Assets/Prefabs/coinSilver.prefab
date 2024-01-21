@@ -75,6 +75,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 837448896080742309}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c6236ba5d6f12a40b1766a70e99196e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6350655121348125835}
   m_SourcePrefab: {fileID: 100100000, guid: 9c6236ba5d6f12a40b1766a70e99196e, type: 3}
 --- !u!1 &6153711735416400493 stripped
 GameObject:
@@ -118,3 +122,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinType: 5
+--- !u!114 &6350655121348125835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6153711735416400493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fcfd4b46e7521e4a9d35c5732284c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degreesPerSecond: 20
+  amplitude: 0.5
+  frequency: 1

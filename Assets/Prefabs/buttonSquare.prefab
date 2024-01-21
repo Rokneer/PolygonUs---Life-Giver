@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 79a63e48e38ffaf47b16d3bbba3f9f47,
         type: 3}
       propertyPath: m_Name
-      value: buttonSquare (1)
+      value: buttonSquare
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -75,6 +75,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2529486552101233531}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79a63e48e38ffaf47b16d3bbba3f9f47,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4034108972275381625}
   m_SourcePrefab: {fileID: 100100000, guid: 79a63e48e38ffaf47b16d3bbba3f9f47, type: 3}
 --- !u!1 &8396161563661568785 stripped
 GameObject:
@@ -101,8 +105,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 0.099999994, z: 0.6}
-  m_Center: {x: -0.00000023841858, y: 0.049999997, z: 0}
+  m_Size: {x: 0.6, y: 0.05323959, z: 0.6}
+  m_Center: {x: -0.00000023841858, y: 0.026619796, z: 0}
 --- !u!65 &2529486552101233531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -124,3 +128,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.42, y: 0.15, z: 0.42}
   m_Center: {x: 0, y: 0.13, z: 0}
+--- !u!114 &4034108972275381625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396161563661568785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafa7c80f5016564986965d0decc5c5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
