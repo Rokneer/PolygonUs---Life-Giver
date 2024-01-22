@@ -42,4 +42,8 @@ public class InputManager : MonoBehaviour
     {
         return playerControls.Player.ChangeCamera.triggered;
     }
+    public bool ThrowBomb()
+    {
+        return playerControls.Player.ThrowBomb.triggered;
+    }
 }

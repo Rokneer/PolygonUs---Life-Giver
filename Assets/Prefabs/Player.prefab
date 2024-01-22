@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &46186141844725795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5344476960814269454}
+  m_Layer: 0
+  m_Name: BombContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5344476960814269454
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46186141844725795}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4082191693652348267}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1769740847530740601
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +44,7 @@ GameObject:
   - component: {fileID: 1829496125391493067}
   - component: {fileID: 7392662681697487809}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1c4757145f9945d4b85197b0aa815ba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -150,7 +181,7 @@ GameObject:
   - component: {fileID: 5537801208386967230}
   m_Layer: 0
   m_Name: PlayObj
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 574ba1b29e6b96448934cf6fc92b0884, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,6 +318,7 @@ GameObject:
   - component: {fileID: 4082191693652348267}
   - component: {fileID: 8833167009665368639}
   - component: {fileID: 5960744395622455259}
+  - component: {fileID: 4448891784330847226}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -310,6 +342,7 @@ Transform:
   - {fileID: 4054888251886425981}
   - {fileID: 3546024721315078876}
   - {fileID: 697807237060191191}
+  - {fileID: 5344476960814269454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8833167009665368639
@@ -352,8 +385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  groundDrag: 6
-  jumpForce: 8
+  groundDrag: 9
+  jumpForce: 9
   jumpCooldown: 0.25
   airMultipler: 0.3
   playerHeight: 2
@@ -361,6 +394,25 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 3546024721315078876}
+--- !u!114 &4448891784330847226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7873209620940031472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fbaea46d5b220449c248ef333a7d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPersonCamera: {fileID: 0}
+  thirdPersonCamera: {fileID: 0}
+  centerDotImage: {fileID: 0}
+  bombCooldown: 2
+  bombPrefab: {fileID: 6128214016657043715, guid: b7bf1d321d140b64ea2071261918add2,
+    type: 3}
+  bombContainer: {fileID: 46186141844725795}
 --- !u!1 &8814216271750276593
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +426,7 @@ GameObject:
   - component: {fileID: 3948768941911501327}
   - component: {fileID: 4177951346712398482}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +475,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1c4757145f9945d4b85197b0aa815ba6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

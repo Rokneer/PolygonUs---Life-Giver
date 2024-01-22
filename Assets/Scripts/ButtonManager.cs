@@ -12,10 +12,10 @@ public class ButtonManager : MonoBehaviour
   }
   void OnTriggerEnter(Collider collider)
   {
-    if (collider.CompareTag("Player")) chestKey.pressedKeyButtons++;
-  }
-  void OnTriggerExit(Collider collider)
-  {
-    if (collider.CompareTag("Player")) chestKey.pressedKeyButtons--;
+    if (collider.CompareTag("Player"))
+    {
+      chestKey.pressedKeyButtons++;
+      Destroy(this);
+    }
   }
 }

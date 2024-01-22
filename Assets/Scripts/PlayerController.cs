@@ -1,12 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject firstPersonCamera;
-    public GameObject thirdPersonCamera;
-    public Image centerDotImage;
     private InputManager inputManager;
+    [Header("Cameras")]
+    [SerializeField] private GameObject firstPersonCamera;
+    [SerializeField] private GameObject thirdPersonCamera;
+    [SerializeField] private Image centerDotImage;
 
     void Start()
     {
